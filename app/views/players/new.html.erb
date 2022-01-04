@@ -1,0 +1,11 @@
+<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+  <div class="col-md-6 text-center">
+		<h1>New Member</h1>
+	</div>
+	<div class="text-center">
+		<%= form_for @player, :remote => true, url: {controller: 'players', action: "create"} do |f| %>
+			<%= render partial: 'players/form', locals: {f: f} %>
+			<%= f.submit "Create", class: 'btn btn-success' %>
+		<% end %>
+	</div>
+</div>
