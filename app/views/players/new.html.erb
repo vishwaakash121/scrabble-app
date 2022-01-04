@@ -3,7 +3,7 @@
 		<h1>New Member</h1>
 	</div>
 	<div class="text-center">
-		<%= form_for @player, :remote => true, url: {controller: 'players', action: "create"} do |f| %>
+		<%= form_for @player, url: {controller: 'players', action: "create"} do |f| %>
 			<%= render partial: 'players/form', locals: {f: f} %>
 			<%= f.submit "Create", class: 'btn btn-success' %>
 		<% end %>
